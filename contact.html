@@ -18,6 +18,24 @@
   </nav>
   <main id="main">
     <h2>Contact us</h2>
+    <p>If you would like to contact us, please use the form below!</p>
+    <form>
+      <label for="contactEmail">Your E-mail:</label>
+      <input type="email" id="contactEmail" />
+
+      <label for="contactSubject">Subject:</label>
+      <input type="text" id="contactSubject" />
+
+      <label for="contactMessage">Message:</label>
+      <textarea id="contactMessage"></textarea>
+
+      <input type="submit" value="Preview message" />
+    </form>
+    <section id="result">
+      <p>From: <span id="resultFrom">someemail@hello.com</span></p>
+      <p>Subject: <span id="resultSubject">My Message</span></p>
+      <p>Message: <span id="resultMessage">Hello World!</span></p>
+    </section>
   </main>
   <footer id="footer">
     <p>All rights reserved! &copy; F1 WRLD 2021</p>
