@@ -3,21 +3,146 @@
 /* applies to screens smaller than 500px (first breakpoint) */
 /* and above unless overwritten below */
 
+@font-face {
+  font-family: 'fontF1';
+  src:
+    local('fontF1'),
+    url('../fonts/Formula1-Regular.otf')
+    format('opentype');
+}
+
+@font-face {
+  font-family: 'fontF1';
+  src:
+    local('fontF1bold'),
+    url('../fonts/Formula1-Bold.otf')
+    format('opentype');
+    font-weight: bold;
+}
+
+@font-face {
+  font-family: 'fontF1titles';
+  src:
+    local('fontF1titles'),
+    url('../fonts/Formula1-Wide.otf')
+    format('opentype');
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 body {
   background: #fcc;
-} 
+}
 
+header {
+  background: black;
+  text-align: center;
+  width: 100vw;
+}
 
+h1 {
+  color: white;
+  padding: 25px;
+  font-family: 'fontF1titles';
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 198px;
+  display: block;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  transform: translateX(100vw);
+  transition: 0.5s;
+}
+
+nav a {
+  display: block;
+  width: 85vw;
+  text-align: center;
+  font-family: 'fontF1';
+  background-color: black;
+  padding: 20px;
+  margin: 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  color: white;
+  font-size: 19px;
+}
+
+nav.open {
+  transform: translateX(0);
+  transform: translateY(-30px);
+  position: absolute; /* prevents horizontal and vertical empty screen overflow */
+  width: 0; /* prevents horizontal and vertical empty screen overflow */
+}
+
+#menuToggler {
+  display: block;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  /* more custom styles */
+  transition: 0.5s;
+}
+
+#menuToggler.open {
+  transform: translateY(292px);
+}
+
+main {
+  width: 100%;
+  display: block;
+  transition: 0.5s;
+}
+
+main.open {
+  transform: translateY(292px);
+  transition: 0.5s;
+}
+
+h2 {
+  font-family: 'fontF1';
+  margin: 20px;
+  font-size: 20px;
+}
+
+footer {
+  display: block;
+  width: 100%;
+  text-align: center;
+  background-color: black;
+  color: white;
+  font-family: 'fontF1';
+  margin-top: 25px;
+  transition: 0.5s;
+  padding: 15px;
+}
+
+footer.open {
+  transform: translateY(292px);
+  transition: 0.5s;
+}
 
 /* TABLET STYLES */
 
 @media screen and (min-width: 500px) {
 
   /* applies to screens wider than 499px */
-  
+
   body {
     background: #cfc;
-  } 
+  }
 }
 
 
@@ -30,5 +155,5 @@ body {
 
   body {
     background: #ccf;
-  } 
+  }
 }
