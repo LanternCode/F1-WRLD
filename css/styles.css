@@ -134,6 +134,14 @@ footer.open {
   transition: 0.5s;
 }
 
+section {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  font-family: 'fontF1';
+  line-height: 1.5;
+}
+
 /* TABLET STYLES */
 
 @media screen and (min-width: 500px) {
