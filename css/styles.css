@@ -47,7 +47,28 @@ header {
 h1 {
   color: white;
   padding: 25px;
+  font-family: 'fontF1titles';
+}
+
+nav {
+  display: block;
+  width: 100vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+nav a {
+  display: block;
+  width: 85vw;
+  text-align: center;
   font-family: 'fontF1';
+  background-color: black;
+  padding: 20px;
+  margin: 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  color: white;
+  font-size: 19px;
 }
 
 /* TABLET STYLES */
