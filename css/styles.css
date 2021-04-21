@@ -9,7 +9,6 @@
     local('fontF1'),
     url('../fonts/Formula1-Regular.otf')
     format('opentype');
-    font-weight: bold;
 }
 
 @font-face {
@@ -18,6 +17,7 @@
     local('fontF1bold'),
     url('../fonts/Formula1-Bold.otf')
     format('opentype');
+    font-weight: bold;
 }
 
 @font-face {
@@ -51,6 +51,10 @@ h1 {
 }
 
 nav {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 198px;
   display: block;
   width: 100%;
   margin-left: auto;
@@ -77,6 +81,8 @@ nav a {
 nav.open {
   transform: translateX(0);
   transform: translateY(-30px);
+  position: absolute; /* prevents horizontal and vertical empty screen overflow */
+  width: 0; /* prevents horizontal and vertical empty screen overflow */
 }
 
 #menuToggler {
@@ -97,13 +103,11 @@ nav.open {
 main {
   width: 100%;
   display: block;
-
-  transform: translateY(-267px);
   transition: 0.5s;
 }
 
 main.open {
-  transform: translateY(25px);
+  transform: translateY(292px);
   transition: 0.5s;
 }
 
@@ -113,7 +117,22 @@ h2 {
   font-size: 20px;
 }
 
+footer {
+  display: block;
+  width: 100%;
+  text-align: center;
+  background-color: black;
+  color: white;
+  font-family: 'fontF1';
+  margin-top: 25px;
+  transition: 0.5s;
+  padding: 15px;
+}
 
+footer.open {
+  transform: translateY(292px);
+  transition: 0.5s;
+}
 
 /* TABLET STYLES */
 
