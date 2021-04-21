@@ -3,21 +3,62 @@
 /* applies to screens smaller than 500px (first breakpoint) */
 /* and above unless overwritten below */
 
+@font-face {
+  font-family: 'fontF1';
+  src:
+    local('fontF1'),
+    url('../fonts/Formula1-Regular.otf')
+    format('opentype');
+    font-weight: bold;
+}
+
+@font-face {
+  font-family: 'fontF1';
+  src:
+    local('fontF1bold'),
+    url('../fonts/Formula1-Bold.otf')
+    format('opentype');
+}
+
+@font-face {
+  font-family: 'fontF1titles';
+  src:
+    local('fontF1titles'),
+    url('../fonts/Formula1-Wide.otf')
+    format('opentype');
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 body {
   background: #fcc;
-} 
+}
 
+header {
+  background: black;
+  text-align: center;
+  width: 100vw;
+}
 
+h1 {
+  color: white;
+  padding: 25px;
+  font-family: 'fontF1';
+}
 
 /* TABLET STYLES */
 
 @media screen and (min-width: 500px) {
 
   /* applies to screens wider than 499px */
-  
+
   body {
     background: #cfc;
-  } 
+  }
 }
 
 
@@ -30,5 +71,5 @@ body {
 
   body {
     background: #ccf;
-  } 
+  }
 }
