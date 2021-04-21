@@ -19,3 +19,4 @@ The `js/scripts.js` file contains a simple console.log statement to confirm that
 https://imjustcreative.com/download-formula-1-fonts/2018/07/16
 https://www.webdesignerdepot.com/2013/01/how-to-use-any-font-you-like-with-css3
 http://ergast.com/mrd/
+https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault

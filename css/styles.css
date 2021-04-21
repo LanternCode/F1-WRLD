@@ -111,7 +111,7 @@ main.open {
   transition: 0.5s;
 }
 
-h2 {
+h2, p {
   font-family: 'fontF1';
   margin: 20px;
   font-size: 20px;
@@ -140,6 +140,61 @@ section {
   margin: 20px;
   font-family: 'fontF1';
   line-height: 1.5;
+}
+
+form {
+  text-align: center;
+  margin: 20px;
+}
+
+form label, form input, form textarea {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+form label {
+  font-family: 'fontF1';
+  line-height: 1.5;
+}
+
+form input, form textarea {
+  width: 60vw;
+  height: 10vh;
+  border: 3px solid gray;
+  border-radius: 25px;
+  background-color: white;
+  margin: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+form textarea {
+  width: 60vw;
+  height: 40vh;
+}
+
+form input[type="submit"] {
+  width: 40vw;
+  border: 2px solid gray;
+  padding: 10px;
+  font-family: 'fontF1';
+  font-size: 19px;
+}
+
+#result {
+  display: none;
+  border: 1px solid black;
+  word-wrap: break-word;
+}
+
+#result span {
+  font-size: 15px;
+  display: block;
+}
+
+#result.open {
+  display: block;
 }
 
 /* TABLET STYLES */
