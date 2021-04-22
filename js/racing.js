@@ -78,7 +78,6 @@ async function loadPage() {
 	clearResults();
 	const racesToLoad = allRaces.slice((currentPage - 1) * pageSize, currentPage * pageSize);
 	loader.classList.add("waiting");
-  console.log(racesToLoad);
 	await insertRaces(racesToLoad);
 	loader.classList.remove("waiting");
   pageIndicator.textContent = currentPage;
@@ -96,4 +95,19 @@ async function doSearch(ev) {
 	loadPage();
 }
 
+function nextPage() {
+	currentPage += 1;
+	const nPages = Math.ceil(allRaces.length / pageSize);
+	if(currentPage > nPages) { currentPage = 1;}
+	loadPage();
+}
+function prevPage() {
+	currentPage -= 1;
+	const nPages = Math.ceil(allRaces.length / pageSize);
+	if(currentPage < 1) { currentPage = nPages;}
+	loadPage();
+}
+
 query.addEventListener('change', doSearch);
+prev.addEventListener('click', prevPage);
+next.addEventListener('click', nextPage);
