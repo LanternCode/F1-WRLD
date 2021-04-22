@@ -43,27 +43,26 @@ function buildArticleFromData(obj) {
 	const article = document.createElement("article");
 	const raceTitle = document.createElement("h4");
 	const raceCircuit = document.createElement("p");
-	const raceUrl = document.createElement("p");
 	const raceDate = document.createElement("p");
 	const raceRound = document.createElement("p");
   const raceLocation = document.createElement("p");
-  const raceCountry = document.createElement("p");
+  const raceUrl = document.createElement("a");
 
-	raceTitle.textContent = obj.raceName;
-  raceCircuit.textContent = obj.Circuit.circuitName;
-  raceUrl.textContent = obj.url;
-  raceDate.textContent = obj.date;
-  raceRound.textContent = obj.round;
-  raceLocation.textContent = obj.Circuit.Location.locality;
-  raceCountry.textContent = obj.Circuit.Location.country;
+	raceTitle.textContent = `${obj.raceName}`;
+  raceCircuit.textContent = `Circuit: ${obj.Circuit.circuitName}`;
+  raceDate.textContent = `Date: ${obj.date}`;
+  raceRound.textContent = `Round: ${obj.round}`;
+  raceLocation.textContent = `Location: ${obj.Circuit.Location.locality}, ${obj.Circuit.Location.country}`;
+  raceUrl.target = "_blank";
+  raceUrl.href = obj.url;
+  raceUrl.textContent = `Tap here to learn more`;
 
 	article.appendChild(raceTitle);
 	article.appendChild(raceCircuit);
-	article.appendChild(raceUrl);
 	article.appendChild(raceDate);
 	article.appendChild(raceRound);
   article.appendChild(raceLocation);
-	article.appendChild(raceCountry);
+  article.appendChild(raceUrl);
 
 	return article;
 }
@@ -89,7 +88,7 @@ async function doSearch(ev) {
 	let result = await loadSearch(query.value);
   allRaces = result["MRData"]["RaceTable"]["Races"]; //save races to an array
   racesFound = result["MRData"]["total"];
-	count.textContent = `found ${racesFound} results for year "${query.value}"`;
+	count.textContent = `found ${racesFound} races in year ${query.value}`;
 	nPages.textContent = Math.ceil(racesFound / pageSize);
 	currentPage = 1;
 	loadPage();
