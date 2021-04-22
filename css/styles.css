@@ -203,6 +203,34 @@ footer p {
   padding: 0;
 }
 
+#params label {
+  position: relative;
+  left: 40px;
+  top: 29px;
+  font-size: 20px;
+}
+
+#loader {
+	font-size: 3em;
+	width: 1em;
+	height: 1em;
+	box-sizing: border-box;
+	border-style: solid;
+	border-width: 0.5em;
+	border-color: hsl(40, 25%, 19%) white;
+	border-radius: 50%;
+	position: fixed;
+	left: calc(50vw - 0.5em);
+	top: calc(50vh - 0.5em);
+	opacity: 0;
+	animation: spin 0.5s ease-in-out alternate infinite;
+	transition: 0.5s;
+}
+
+#loader.waiting {
+	opacity: 1;
+}
+
 /* TABLET STYLES */
 
 @media screen and (min-width: 500px) {
