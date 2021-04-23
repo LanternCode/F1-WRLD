@@ -270,6 +270,10 @@ img {
   height: 40vh;
 }
 
+#result h3 {
+  margin: 20px;
+}
+
 /* TABLET STYLES */
 
 @media screen and (min-width: 650px) {
