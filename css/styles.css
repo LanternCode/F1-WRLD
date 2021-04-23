@@ -270,6 +270,15 @@ img {
   height: 40vh;
 }
 
+#result h3 {
+  margin: 20px;
+}
+
+#search h3 {
+  text-align: center;
+  margin: 15px;
+}
+
 /* TABLET STYLES */
 
 @media screen and (min-width: 650px) {
@@ -327,6 +336,7 @@ img {
   }
 
   #pagination, #count {
+    padding: 10px;
     margin-left: auto;
     margin-right: auto;
   }

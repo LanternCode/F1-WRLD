@@ -25,11 +25,9 @@ function clearResults() {
 }
 
 async function loadSearch(season) {
-  if(season >= 1950 && season <= 2021 ) {
-    let url = `http://ergast.com/api/f1/${season}.json`; //base url to call the api
-    response = await fetch(url);
-  	return response.json();
-  }
+  let url = `http://ergast.com/api/f1/${season}.json`; //base url to call the api
+  response = await fetch(url);
+	return response.json();
 }
 
 function buildArticleFromData(obj) {
@@ -75,16 +73,18 @@ async function loadPage() {
   pageIndicator.textContent = currentPage;
 }
 
-async function doSearch(ev) {
-	clearResults();
-	loader.classList.add("waiting");
-	let result = await loadSearch(query.value);
-  allRaces = result["MRData"]["RaceTable"]["Races"]; //save races to an array
-  racesFound = result["MRData"]["total"];
-	count.textContent = `found ${racesFound} races in year ${query.value}`;
-	nPages.textContent = Math.ceil(racesFound / pageSize);
-	currentPage = 1;
-	loadPage();
+async function doSearch() {
+  if(query.value >= 1950 && query.value <= 2021 ) {
+  	clearResults();
+  	loader.classList.add("waiting");
+  	let result = await loadSearch(query.value);
+    allRaces = result["MRData"]["RaceTable"]["Races"]; //save races to an array
+    racesFound = result["MRData"]["total"];
+  	count.textContent = `found ${racesFound} races in year ${query.value}`;
+  	nPages.textContent = Math.ceil(racesFound / pageSize);
+  	currentPage = 1;
+  	loadPage();
+  }
 }
 
 function nextPage() {
