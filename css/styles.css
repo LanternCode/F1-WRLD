@@ -124,7 +124,6 @@ footer {
   background-color: black;
   color: white;
   font-family: 'fontF1';
-  margin-top: 25px;
   transition: 0.5s;
   padding: 15px;
 }
@@ -265,6 +264,11 @@ footer p {
 
 #query {
   height: 25px;
+}
+
+img {
+  width: 100vw;
+  height: 40vh;
 }
 
 /* TABLET STYLES */
