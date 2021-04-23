@@ -20,3 +20,6 @@ https://imjustcreative.com/download-formula-1-fonts/2018/07/16
 https://www.webdesignerdepot.com/2013/01/how-to-use-any-font-you-like-with-css3
 http://ergast.com/mrd/
 https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault
+https://favicon.io/favicon-converter/
+w3schools
+lab work

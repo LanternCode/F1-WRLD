@@ -1,10 +1,3 @@
-menuToggler.addEventListener('click', ev => {
-  menu.classList.toggle('open');
-  menuToggler.classList.toggle('open');
-  main.classList.toggle('open');
-  footer.classList.toggle('open');
-});
-
 showPreview.addEventListener('click', ev => {
   //stop the form from being submitted
   ev.preventDefault();

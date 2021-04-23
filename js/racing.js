@@ -1,10 +1,3 @@
-menuToggler.addEventListener('click', ev => {
-  menu.classList.toggle('open');
-  menuToggler.classList.toggle('open');
-  main.classList.toggle('open');
-  footer.classList.toggle('open');
-});
-
 document.addEventListener("DOMContentLoaded", function() {
   const select = document.getElementById("query");
   const firstOption = document.createElement("option");
@@ -95,16 +88,20 @@ async function doSearch(ev) {
 }
 
 function nextPage() {
-	currentPage += 1;
-	const nPages = Math.ceil(allRaces.length / pageSize);
-	if(currentPage > nPages) { currentPage = 1;}
-	loadPage();
+  if(Array.isArray(allRaces)){
+    currentPage += 1;
+    const nPages = Math.ceil(allRaces.length / pageSize);
+    if(currentPage > nPages) { currentPage = 1;}
+    loadPage();
+  }
 }
 function prevPage() {
-	currentPage -= 1;
-	const nPages = Math.ceil(allRaces.length / pageSize);
-	if(currentPage < 1) { currentPage = nPages;}
-	loadPage();
+  if(Array.isArray(allRaces)){
+  	currentPage -= 1;
+  	const nPages = Math.ceil(allRaces.length / pageSize);
+  	if(currentPage < 1) { currentPage = nPages;}
+  	loadPage();
+  }
 }
 
 query.addEventListener('change', doSearch);
