@@ -92,7 +92,6 @@ nav.open {
   color: white;
   text-align: center;
   font-size: 30px;
-  /* more custom styles */
   transition: 0.5s;
 }
 
@@ -300,7 +299,6 @@ img {
 
   #break {
     display: block;
-
   }
 
   img {
@@ -316,6 +314,21 @@ img {
 
   form textarea {
     height: 30vh;
+  }
+
+  #query {
+    width: 25vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #selectLabel {
+    text-align: center;
+  }
+
+  #pagination, #count {
+    margin-left: auto;
+    margin-right: auto;
   }
 
 }
@@ -350,6 +363,8 @@ img {
 
   #showPreview {
     width: 10vw;
+    height: 7vh;
+    padding: 5px;
   }
 
   #contactImage {
