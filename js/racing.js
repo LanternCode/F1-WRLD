@@ -88,16 +88,20 @@ async function doSearch(ev) {
 }
 
 function nextPage() {
-	currentPage += 1;
-	const nPages = Math.ceil(allRaces.length / pageSize);
-	if(currentPage > nPages) { currentPage = 1;}
-	loadPage();
+  if(Array.isArray(allRaces)){
+    currentPage += 1;
+    const nPages = Math.ceil(allRaces.length / pageSize);
+    if(currentPage > nPages) { currentPage = 1;}
+    loadPage();
+  }
 }
 function prevPage() {
-	currentPage -= 1;
-	const nPages = Math.ceil(allRaces.length / pageSize);
-	if(currentPage < 1) { currentPage = nPages;}
-	loadPage();
+  if(Array.isArray(allRaces)){
+  	currentPage -= 1;
+  	const nPages = Math.ceil(allRaces.length / pageSize);
+  	if(currentPage < 1) { currentPage = nPages;}
+  	loadPage();
+  }
 }
 
 query.addEventListener('change', doSearch);
