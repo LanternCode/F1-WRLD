@@ -12,7 +12,7 @@
 </head>
 <body>
   <header>
-    <h1>Formula One WRLD</h1>
+    <h1>Formula One <span id="break">WRLD</span></h1>
   </header>
   <div id="menuToggler">&#8801;</div>
   <nav id="menu">
@@ -23,7 +23,7 @@
   <main id="main">
     <h2>Racing data</h2>
     <section id="search">
-			<label for="query">Select a racing season:</label>
+			<label for="query" id="selectLabel">Select a racing season:</label>
       <select id="query"></select>
 		</section>
 		<section id="meta">
@@ -34,6 +34,7 @@
 				<button id="next">&gt;</button>
 			</span>
 		</section>
+    <img alt="Red Bull Aston Martin" src="images/jose-pablo-dominguez-g7V4CYl_nos-unsplash.jpg" />
     <div id="loader"></div>
     <div id="results"></div>
   </main>

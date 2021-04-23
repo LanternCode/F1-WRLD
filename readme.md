@@ -21,5 +21,7 @@ https://www.webdesignerdepot.com/2013/01/how-to-use-any-font-you-like-with-css3
 http://ergast.com/mrd/
 https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault
 https://favicon.io/favicon-converter/
-w3schools
+https://www.w3schools.com/jsref/jsref_isarray.asp
+https://unsplash.com/s/photos/formula-1
+https://css-tricks.com/replace-the-image-in-an-img-with-css/
 lab work
