@@ -308,6 +308,16 @@ img {
     height: 55vh;
   }
 
+  form input, form textarea {
+    width: 40vw;
+    font-size: 25px;
+    font-family: 'fontF1';
+  }
+
+  form textarea {
+    height: 30vh;
+  }
+
 }
 
 /* DESKTOP STYLES */
@@ -326,6 +336,28 @@ img {
     background-size: cover;
     z-index: 10;
     padding-left: 99vw;
+  }
+
+  form input {
+    width: 25vw;
+    height: 5vh;
+    font-size: 20px;
+  }
+
+  form textarea {
+    height: 10vh;
+  }
+
+  #showPreview {
+    width: 10vw;
+  }
+
+  #contactImage {
+    width: 70vw;
+    height: 80vh;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
   }
 
 }
