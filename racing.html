@@ -18,10 +18,24 @@
   </nav>
   <main id="main">
     <h2>Racing data</h2>
+    <section id="search">
+			<label for="query">Select a racing season:</label>
+      <select id="query"></select>
+		</section>
+		<section id="meta">
+			<span id="count"></span>
+			<span id="pagination">
+				<button id="prev">&lt;</button>
+				page <span id="pageIndicator">0</span> of <span id="nPages">0</span>
+				<button id="next">&gt;</button>
+			</span>
+		</section>
+    <div id="loader"></div>
+    <div id="results"></div>
   </main>
   <footer id="footer">
     <p>All rights reserved! &copy; F1 WRLD 2021</p>
   </footer>
-  <script src="js/scripts.js" charset="utf-8"></script>
+  <script src="js/racing.js" charset="utf-8"></script>
 </body>
 </html>
