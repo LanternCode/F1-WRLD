@@ -273,16 +273,42 @@ img {
 
 /* TABLET STYLES */
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 650px) {
 
-  /* applies to screens wider than 499px */
+  /* applies to screens wider than 650px */
 
-  body {
-    background: #cfc;
+  #menuToggler {
+    display: none;
   }
+
+  nav {
+    display: block;
+    color: white;
+    transform: translateX(0vw);
+    position: static;
+    width: 100vw;
+    white-space: nowrap;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 33%;
+    border-radius: 0;
+  }
+
+  #break {
+    display: block;
+
+  }
+
+  img {
+    width: 100vw;
+    height: 55vh;
+  }
+
 }
-
-
 
 /* DESKTOP STYLES */
 
@@ -290,7 +316,16 @@ img {
 
   /* applies to screens wider than 999px */
 
-  body {
-    background: #ccf;
+  img {
+    width: 99vw;
+    height: 65vh;
   }
+
+  #homepageimage {
+    background: url("../images/2019-Abu-Dhabi-Drivers-Photo.jpg") no-repeat;
+    background-size: cover;
+    z-index: 10;
+    padding-left: 99vw;
+  }
+
 }

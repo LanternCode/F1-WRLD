@@ -23,4 +23,5 @@ https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault
 https://favicon.io/favicon-converter/
 https://www.w3schools.com/jsref/jsref_isarray.asp
 https://unsplash.com/s/photos/formula-1
+https://css-tricks.com/replace-the-image-in-an-img-with-css/
 lab work
