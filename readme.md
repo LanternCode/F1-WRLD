@@ -39,8 +39,11 @@ This project was created as part of my learning at DMU. Below you can find most,
 > https://unsplash.com/s/photos/formula-1
 
 > Validation:
+> 
 > https://validator.w3.org/
+> 
 > https://jigsaw.w3.org/css-validator/
+> 
 > https://esprima.org/demo/validate.html
 
 ### All Rights Reserved &copy; P2429405 @ De Montfort University
