@@ -3,24 +3,345 @@
 /* applies to screens smaller than 500px (first breakpoint) */
 /* and above unless overwritten below */
 
+@font-face {
+  font-family: 'fontF1';
+  src:
+    local('fontF1'),
+    url('../fonts/Formula1-Regular.otf')
+    format('opentype');
+}
+
+@font-face {
+  font-family: 'fontF1';
+  src:
+    local('fontF1bold'),
+    url('../fonts/Formula1-Bold.otf')
+    format('opentype');
+    font-weight: bold;
+}
+
+@font-face {
+  font-family: 'fontF1titles';
+  src:
+    local('fontF1titles'),
+    url('../fonts/Formula1-Wide.otf')
+    format('opentype');
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 body {
   background: #fcc;
-} 
+}
 
+header {
+  background: black;
+  text-align: center;
+  width: 100vw;
+}
 
+h1 {
+  color: white;
+  padding: 25px;
+  font-family: 'fontF1titles';
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 198px;
+  display: block;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  transform: translateX(100vw);
+  transition: 0.5s;
+}
+
+nav a {
+  display: block;
+  width: 85vw;
+  text-align: center;
+  font-family: 'fontF1';
+  background-color: black;
+  padding: 20px;
+  margin: 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  color: white;
+  font-size: 19px;
+}
+
+nav.open {
+  transform: translateX(0);
+  transform: translateY(-30px);
+  position: absolute; /* prevents horizontal and vertical empty screen overflow */
+  width: 0; /* prevents horizontal and vertical empty screen overflow */
+}
+
+#menuToggler {
+  display: block;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-size: 30px;
+  transition: 0.5s;
+}
+
+#menuToggler.open {
+  transform: translateY(292px);
+}
+
+main {
+  width: 100%;
+  display: block;
+  transition: 0.5s;
+}
+
+main.open {
+  transform: translateY(292px);
+  transition: 0.5s;
+}
+
+h2, p {
+  font-family: 'fontF1';
+  margin: 20px;
+  font-size: 20px;
+}
+
+footer {
+  display: block;
+  width: 100%;
+  text-align: center;
+  background-color: black;
+  color: white;
+  font-family: 'fontF1';
+  transition: 0.5s;
+  padding: 15px;
+}
+
+footer.open {
+  transform: translateY(292px);
+  transition: 0.5s;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  font-family: 'fontF1';
+  line-height: 1.5;
+}
+
+form {
+  text-align: center;
+  margin: 20px;
+}
+
+form label, form input, form textarea {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+form label {
+  font-family: 'fontF1';
+  line-height: 1.5;
+}
+
+form input, form textarea {
+  width: 60vw;
+  height: 10vh;
+  border: 3px solid gray;
+  border-radius: 25px;
+  background-color: white;
+  margin: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+form textarea {
+  width: 60vw;
+  height: 40vh;
+}
+
+form input[type="submit"] {
+  width: 40vw;
+  border: 2px solid gray;
+  padding: 10px;
+  font-family: 'fontF1';
+  font-size: 19px;
+}
+
+#result {
+  display: none;
+  border: 1px solid black;
+  word-wrap: break-word;
+}
+
+#result span {
+  font-size: 15px;
+  display: block;
+}
+
+#result.open {
+  display: block;
+}
+
+footer p {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+#params label {
+  position: relative;
+  left: 40px;
+  top: 29px;
+  font-size: 20px;
+}
+
+#loader {
+	font-size: 3em;
+	width: 1em;
+	height: 1em;
+	box-sizing: border-box;
+	border-style: solid;
+	border-width: 0.5em;
+	border-color: hsl(40, 25%, 19%) white;
+	border-radius: 50%;
+	position: fixed;
+	left: calc(50vw - 0.5em);
+	top: calc(50vh - 0.5em);
+	opacity: 0;
+	animation: spin 0.5s ease-in-out alternate infinite;
+	transition: 0.5s;
+}
+
+#loader.waiting {
+	opacity: 1;
+}
+
+#results {
+  margin: 5px;
+}
+
+#results article {
+  border: 1px solid black;
+  margin: 20px;
+  padding: 15px;
+}
+
+#results h4 {
+  font-size: 20px;
+  font-family: 'fontF1';
+}
+
+#results p {
+  font-size: 15px;
+  word-wrap: break-word;
+}
+
+#results a {
+  word-wrap: break-word;
+  font-family: 'fontF1';
+  font-size: 15px;
+  color: black;
+  margin: 20px;
+}
+
+#prev, #next {
+  font-size: 20px;
+}
+
+#query {
+  height: 25px;
+}
+
+img {
+  width: 100vw;
+  height: 40vh;
+}
+
+#result h3 {
+  margin: 20px;
+}
+
+#search h3 {
+  text-align: center;
+  margin: 15px;
+}
 
 /* TABLET STYLES */
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 650px) {
 
-  /* applies to screens wider than 499px */
-  
-  body {
-    background: #cfc;
-  } 
+  /* applies to screens wider than 650px */
+
+  #menuToggler {
+    display: none;
+  }
+
+  nav {
+    display: block;
+    color: white;
+    transform: translateX(0vw);
+    position: static;
+    width: 100vw;
+    white-space: nowrap;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 33%;
+    border-radius: 0;
+  }
+
+  #break {
+    display: block;
+  }
+
+  img {
+    width: 100vw;
+    height: 55vh;
+  }
+
+  form input, form textarea {
+    width: 40vw;
+    font-size: 25px;
+    font-family: 'fontF1';
+  }
+
+  form textarea {
+    height: 30vh;
+  }
+
+  #query {
+    width: 25vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #selectLabel {
+    text-align: center;
+  }
+
+  #pagination, #count {
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
 }
-
-
 
 /* DESKTOP STYLES */
 
@@ -28,7 +349,40 @@ body {
 
   /* applies to screens wider than 999px */
 
-  body {
-    background: #ccf;
-  } 
+  img {
+    width: 99vw;
+    height: 65vh;
+  }
+
+  #homepageimage {
+    background: url("../images/2019-Abu-Dhabi-Drivers-Photo.jpg") no-repeat;
+    background-size: cover;
+    z-index: 10;
+    padding-left: 99vw;
+  }
+
+  form input {
+    width: 25vw;
+    height: 5vh;
+    font-size: 20px;
+  }
+
+  form textarea {
+    height: 10vh;
+  }
+
+  #showPreview {
+    width: 10vw;
+    height: 7vh;
+    padding: 5px;
+  }
+
+  #contactImage {
+    width: 70vw;
+    height: 80vh;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+  }
+
 }

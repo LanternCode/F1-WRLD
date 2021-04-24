@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>F1 WRLD - Formula One WRLD</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="manifest" href="images/site.webmanifest">
+</head>
+<body>
+  <header>
+    <h1>Formula One <span id="break">WRLD</span></h1>
+  </header>
+  <div id="menuToggler">&#8801;</div>
+  <nav id="menu">
+    <a href="index.html">Home</a>
+    <a href="mission.html">Our mission</a>
+    <a href="racing.html">Racing data</a>
+  </nav>
+  <main id="main">
+    <h2>Contact us</h2>
+    <p id="contactp">If you would like to contact us, whether you have any
+      any new ideas, bug reports, or just like to share some F1
+      thoughts, please use the form below!<p>
+    <form>
+      <label for="contactEmail">Your E-mail:</label>
+      <input type="email" id="contactEmail"/>
+
+      <label for="contactSubject">Subject:</label>
+      <input type="text" id="contactSubject"/>
+
+      <label for="contactMessage">Message:</label>
+      <textarea id="contactMessage"></textarea>
+
+      <input id="showPreview" type="submit" value="Preview" />
+    </form>
+    <img alt="Max Verstappen 33's F1 car" src="images/patrick-robert-doyle-SKUhsXRpSL0-unsplash.jpg" id="contactImage"/>
+    <section id="result">
+      <h3>Message Preview</h3>
+      <p>From: <span id="resultFrom">someemail@hello.com</span></p>
+      <p>Subject: <span id="resultSubject">My Message</span></p>
+      <p>Message: <span id="resultMessage">Hello World!</span></p>
+    </section>
+  </main>
+  <footer id="footer">
+    <p>All rights reserved! &copy; F1 WRLD 2021</p>
+  </footer>
+  <script src="js/navigation.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>
