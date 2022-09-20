@@ -2,6 +2,7 @@
 
 ### Welcome to the official repository of Formula One WRLD!
 This project was created as part of my learning at DMU. Below you can find most, if not all the external sources used.
+The project will not be updated and serves only as portfolio material.
 
 ## Development References:
 
@@ -46,4 +47,4 @@ This project was created as part of my learning at DMU. Below you can find most,
 > 
 > https://esprima.org/demo/validate.html
 
-### All Rights Reserved &copy; P2429405 @ De Montfort University
+### All Rights Reserved &copy; De Montfort University
